@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+body {
+	margin: 0 auto;	
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+	font-weight: 300;
+	text-align: center;
+}
+
+h2 {
+	font-weight: 300;
+	text-align: center;
+}
+
+h3 {
+	font-weight: 500;
+	line-height: 1.7em;
+  margin: 0;
+}
+
+h4 {
+	color: #666;
+  margin: 0;
+}
+
+#disclaimer {
+  text-align:center;
+}
+
+.products {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product-card {
+	display: flex;
+	flex-direction: column;
+  box-sizing: border-box;
+	padding: 2%;
+	flex: 1 100%;
+	background-color: #FFF;
+}
+
+.product-image img {
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	max-height: 300px;
+	margin: 0px auto;
+}
+
+.product-info {
+	margin-top: auto;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.buy-now {
+	min-width: 55%;
+  box-sizing: border-box;
+  padding: 0.5em 1em;
+  background-color: #d1505c;
+  font-size: 1.2em;
+  color: #fff;
+  border: 0;
+  margin: 1em auto 0.5em;
+  cursor: pointer;
+}
+
+.buy-now:hover {
+	background-color: #d1424f;
+}
+
+@media ( min-width: 500px ) {
+	.product-card {
+		flex: 1 50%;
+  }
+}
+
+@media ( min-width: 800px ) {
+	.product-card {
+		flex: 1 33%;
+  }
+}
+
+@media ( min-width: 1000px ) {
+	.product-card {
+		flex: 1 25%;
+  }
+}
+
