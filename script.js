@@ -71,8 +71,6 @@ if (!window.PaymentRequest) {
       // This next bit happens once we have entered our details and confirmed. `paymentResponse` will contain the data we entered.
       .then(function(paymentResponse) {
       
-        console.log('Never gets here!');
-      
         // Process the payment server-side (simulated in this case!)
         processPaymentDetails(paymentResponse)
           .then(function(paymentResponse) {

@@ -14,9 +14,9 @@ If you have any difficulties or questions at any point, just let us know and we 
 
 1. Click 'Remix this' to make your own version of this project.
 
-1. Click 'Show Live' to see how it looks already. You should see a page of products, with links to 'Add to Basket' and 'Buy Now'.
+1. Click 'Show Live' to see how it looks already. You should see a page of products, with links to 'Buy Now' under each product.
 
-1. Take note of your project's URL. Open the page in the Samsung Internet web browser on an Android 5.0+ phone (if you don't have one, we can lend you one).
+1. Take note of your project's URL. Open the page in the Samsung Internet web browser on an Android 5.0+ phone (if you don't have one, we can lend you one). _Be sure to include the https:// at the beginning_.
 
 ### Payment Request UI
 
@@ -42,18 +42,18 @@ So far, we have simply requested payment details and nothing else. What if we wa
 
 It's quite likely that we will want to offer multiple shipping options, perhaps based on the user's location. We can do this by hooking into the `shippingaddresschange` event and returning appropriate `shippingOptions`.
 
-1. Uncomment the section that starts with `var STANDARD_SHIPPING_PRICE = 2.0;`. This sets up two shipping options, a standard option for $2 and a special SDC-only same day delivery for $3!
+1. Uncomment the section that starts with `var STANDARD_SHIPPING_PRICE = 2.0;`. This sets up two shipping options, a standard option and a special SDC option!
 
 1. Uncomment the `shippingOptions: [shippingOptionStandard]` line from the `purchaseDetails`. This will set up our initial default option.
 
-1. Uncomment the shipping address change listener, starting with `paymentRequest.addEventListener('shippingaddresschange'...` This will let us listen into when the user enters or selects their shipping address. If the postal code is 94103, we add a special SDC-only option!
+1. Uncomment the shipping address change listener, starting with `paymentRequest.addEventListener('shippingaddresschange'...` This will let us listen into when the user enters or selects their shipping address. If the postal code is 94103, we add our special SDC-only same day option!
 
 1. If you were to try making a purchase now, you would see that it gets stuck when we select our shipping option. That's because we also now need to handle the `shippingoptionchange` event. Uncomment this section too, starting with `paymentRequest.addEventListener('shippingoptionchange'...`.
 
-1. Now try making a purchase again. If you enter an address with the postal code `94103` (for the Moscone West center), you should unlock the special $3 same day delivery option! If you enter any other address, you will just get the standard shipping option for $2. You should see the total price update with the shipping cost.
+1. Now try making a purchase again. If you enter an address with the postal code `94103` (for the Moscone West center), you should see the $3 same day delivery option is available! If you enter any other address, you will just get the standard shipping option for $2. You should see the total price update with the shipping cost.
 
 
-### What's next?
+### What's Next?
 
 You have now seen how to start using the Payment Request API, in order to make better online shopping experiences. This is a nice flow for taking debit or credit card payments, but we could make it even easier for our customers who use Samsung Pay! Samsung Internet supports Samsung Pay via this W3C Payment Request open standard.
 
