@@ -12,6 +12,8 @@ If you have any difficulties or questions at any point, just let us know and we 
 
 ### Getting Started
 
+NB. If you're not already viewing this on Glitch, please [go here first](https://glitch.com/~web-payments-101).
+
 1. Click 'Remix this' to make your own version of this project.
 
 1. Click 'Show Live' to see how it looks already. You should see a page of products, with links to 'Buy Now' under each product.
